@@ -1,8 +1,11 @@
 Summary:	LIB
+Summary(pl):	LIB
 Name:		LIB
 Version:	0.1.62
 Release:	1
 Group:		Applications/Games
+Group(de):	Applikationen/Spiele
+Group(pl):	Aplikacje/Gry
 License:	GPL
 Source0:	http://download.sourceforge.net/lib/%{name}.%{version}.tar.bz2
 URL:		http://LIB.sourceforge.net/
@@ -12,10 +15,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 LIB is yet another (polish) roguelike game.
 
 %description -l pl
-LIB to jeszcze jeden polski rogalik
+LIB to jeszcze jeden polski rogalik.
 
 %prep
-%setup  -q -n %{version}
+%setup -q -n %{version}
 
 %build
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
