@@ -5,7 +5,7 @@ Version:	0.1.67
 Release:	1
 Group:		Applications/Games
 License:	GPL
-Source0:	http://download.sourceforge.net/lib/%{name}.%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/lib/%{name}.%{version}.tar.bz2
 # Source0-md5:	c8e17aaf9c16ccc73f4336a0d170b3ba
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://lib.sourceforge.net/
@@ -44,6 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
+%lang(pl) %doc COPYING
 %attr(755,root,root) %{_prefix}/games/LIB
 %dir %{_libdir}/games/LIB
 %{_libdir}/games/LIB/*
