@@ -7,7 +7,6 @@ Group:		Applications/Games
 License:	GPL
 Source0:	http://download.sourceforge.net/lib/%{name}.%{version}.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-no_usr_games.patch
 URL:		http://LIB.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,8 +23,8 @@ LIB to jeszcze jeden polski rogalik.
 %build
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 aclocal
-autoconf 
-automake -a -c
+%{__autoconf}
+%{__automake}
 %configure2_13
 %{__make} 
 
