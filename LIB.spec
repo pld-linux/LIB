@@ -8,7 +8,7 @@ License:	GPL
 Source0:	http://download.sourceforge.net/lib/%{name}.%{version}.tar.bz2
 # Source0-md5:	c8e17aaf9c16ccc73f4336a0d170b3ba
 Patch0:		%{name}-DESTDIR.patch
-URL:		http://LIB.sourceforge.net/
+URL:		http://lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog COPYING NEWS README TODO
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_prefix}/games/LIB
 %dir %{_libdir}/games/LIB
 %{_libdir}/games/LIB/*
