@@ -22,7 +22,7 @@ LIB to jeszcze jeden polski rogalik.
 
 %build
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
-%configure 
+%configure2_13
 %{__make} 
 
 %install
