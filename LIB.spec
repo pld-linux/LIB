@@ -2,7 +2,7 @@ Summary:	LIB
 Summary(pl):	LIB
 Name:		LIB
 Version:	0.1.62
-Release:	1
+Release:	2
 Group:		Applications/Games
 License:	GPL
 Source0:	http://download.sourceforge.net/lib/%{name}.%{version}.tar.bz2
@@ -38,5 +38,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_prefix}/games/LIB
 %dir %{_libdir}/games/LIB
 %{_libdir}/games/LIB/*
-%lang(en) %{_datadir}/locale/en/LC_MESSAGES/*
+%{_datadir}/locale/en/LC_MESSAGES/*
 %doc *.gz
