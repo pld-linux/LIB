@@ -1,0 +1,10 @@
+--- Makefile.am~	Sun Sep 30 15:43:25 2001
++++ Makefile.am	Tue Jun 25 10:07:15 2002
+@@ -7,6 +7,6 @@
+ LIB_SOURCES = czas.c ekran.c io.c keymap.c ksiazki.c LIB.c parser.c postac.c potwor.c poziom.c przedmioty.c pulapki.c punkty.c rozne.c schematekwipunku.c strefy.c swiat.c trasy.c umiejetnosci.c walka.c zadania.c
+ 
+ pkgdata_DATA = lib.data
+-localedir = $(datadir)/po
++localedir = $(DESTDIR)$(datadir)/po
+ lib.data: utils lib
+ 	utils/join
