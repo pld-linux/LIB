@@ -18,7 +18,7 @@ LIB to jeszcze jeden polski rogalik
 %setup  -q -n %{version}
 
 %build
-CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -I/usr/include/ncurses"
+CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %configure 
 %{__make} 
 
