@@ -6,6 +6,7 @@ Release:	1
 Group:		Applications/Games
 License:	GPL
 Source0:	http://download.sourceforge.net/lib/%{name}.%{version}.tar.bz2
+# Source0-md5:	c8e17aaf9c16ccc73f4336a0d170b3ba
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://LIB.sourceforge.net/
 BuildRequires:	autoconf
