@@ -4,8 +4,6 @@ Name:		LIB
 Version:	0.1.62
 Release:	1
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 License:	GPL
 Source0:	http://download.sourceforge.net/lib/%{name}.%{version}.tar.bz2
 URL:		http://LIB.sourceforge.net/
