@@ -8,6 +8,7 @@ License:	GPL
 Source0:	http://dl.sourceforge.net/lib/%{name}.%{version}.tar.bz2
 # Source0-md5:	c8e17aaf9c16ccc73f4336a0d170b3ba
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-configure.patch
 URL:		http://lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -22,13 +23,17 @@ LIB to jeszcze jeden polski rogalik.
 %prep
 %setup  -q -n %{name}
 %patch0 -p0
+%patch1 -p1
 
 %build
-CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+%{__gettextize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure2_13
+CFLAGS="%{rpmcflags} -I/usr/include/ncurses" 
+%configure \
+	--disable-nls
+
 %{__make}
 
 %install
