@@ -12,6 +12,7 @@ Patch1:		%{name}-configure.patch
 URL:		http://lib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +41,9 @@ CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_prefix}/games,%{_libdir}/games/LIB,%{_datadir}/locale/en/LC_MESSAGES}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 install po/en.gmo $RPM_BUILD_ROOT%{_datadir}/locale/en/LC_MESSAGES
 
 %clean
@@ -53,4 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_prefix}/games/LIB
 %dir %{_libdir}/games/LIB
 %{_libdir}/games/LIB/*
+# ???
 %{_datadir}/locale/en/LC_MESSAGES/*
