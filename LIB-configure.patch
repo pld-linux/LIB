@@ -1,0 +1,32 @@
+diff -Nur LIB.ori/configure.in LIB.mod/configure.in
+--- LIB.ori/configure.in	2001-11-06 19:35:14.000000000 +0100
++++ LIB.mod/configure.in	2007-01-11 16:43:10.574495250 +0100
+@@ -18,6 +18,7 @@
+ AC_DEFINE_UNQUOTED(ALL_LINGUAS,"$ALL_LINGUAS")
+ AC_SUBST(PACKAGE)
+ AC_SUBST(VERSION)
++AC_GNU_SOURCE
+ AM_GNU_GETTEXT
+ 
+ dnl Checks for header files.
+@@ -85,8 +86,6 @@
+ djgpp="no";
+ case "$target" in
+ *-linux-gnu) AC_DEFINE(LINUX);;
+-*-cygwin)    AC_DEFINE(CYGWIN) 
+-             AM_MAINTAINER_MODE;;
+ *-msdosdjgpp) AC_DEFINE(_DJGPP)
+              djgpp="yes";;
+ esac
+diff -Nur LIB.ori/utils/join.c LIB.mod/utils/join.c
+--- LIB.ori/utils/join.c	2001-09-30 14:52:29.000000000 +0200
++++ LIB.mod/utils/join.c	2007-01-12 02:42:45.304809750 +0100
+@@ -13,7 +13,7 @@
+ 
+ void dodaj(char *nazwa_pliku, char *sygnaturka)
+ {
+-    long int ile, ile_compr, blad;
++    long int ile, ile_compr = MAXTAB, blad;
+     if ((plik = fopen(nazwa_pliku, "rb")) == NULL) {
+ 	fprintf(stderr, _("\nNie mogê otworzyæ %s.\n"), nazwa_pliku);
+ 	exit(1);
