@@ -1,5 +1,5 @@
 Summary:	LIB - yet another (Polish) roguelike game
-Summary(pl.UTF-8):   LIB - jeszcze jeden polski rogalik
+Summary(pl.UTF-8):	LIB - jeszcze jeden polski rogalik
 Name:		LIB
 Version:	0.1.67
 Release:	1
